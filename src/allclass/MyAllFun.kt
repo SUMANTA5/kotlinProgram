@@ -1,6 +1,10 @@
 package allclass
 import sun.awt.geom.Crossings
-class allClassIfElse {
+class MyAllFun {
+
+     //IfElse
+
+
     fun negativePositiveZero(a: Int) {
         when {
             a > 0 -> {
@@ -102,5 +106,49 @@ class allClassIfElse {
             else -> println("number is not valid")
         }
     }
+    fun triangleIsValidOrNot(angles1: Int, angles2: Int, angles3: Int ){
+        if (angles1 + angles2 + angles3 == 180){
+            println("Triangle Is Valid")
+        }else {
+            println("Triangle Is Not Valid")
+        }
+    }
+   fun whatIsYourGrade(percentage: Int){
+       when(percentage){
+           in 100 downTo 90 -> println("Grade (A)")
+           in 89 downTo 80 -> println("Grade (B)")
+           in 79 downTo 70 -> println("Grade (c)")
+           in 69 downTo 60 -> println("Grade (D)")
+           in 59 downTo 40 -> println("Grade (E)")
+           else ->  println("Grade (F)")
+       }
+   }
 
+
+    //when//
+
+
+    fun maxTwoNumber(num1: Int, num2: Int) {
+        when {
+            num1 > num2 -> println("max:${num1}")
+            num2 > num1 -> println("max:${num2}")
+            else -> println("This number is not max")
+        }
+    }
+    fun evenOddInWhen(number: Int){
+        when(number%2==0){
+            true-> println("Is Even")
+            false-> println("Is Odd")
+        }
+    }
+    fun calculator(num1: Int,num2: Int, sign:String){
+        when(sign){
+           "+" -> println("Addition:${num1+num2}")
+           "-" -> println("Subtraction:${num1-num2}")
+           "*" -> println("Multiplication:${num1*num2}")
+           "/"-> println("Division:${num1/num2}")
+        }
+    }
+
+    //Loop//
 }

@@ -1,10 +1,10 @@
 package main
 
-import allclass.allClassIfElse
+import allclass.MyAllFun
 
 
 fun main() {
 
-    val evenodd = allClassIfElse()
-    val isEvenNumber = evenodd.numberOfDaysInThatMonth(0)
+    val a = MyAllFun()
+    val isEvenNumber = a.calculator(10,20,"-")
 }
