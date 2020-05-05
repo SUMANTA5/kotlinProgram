@@ -3,8 +3,6 @@ import sun.awt.geom.Crossings
 class MyAllFun {
 
      //IfElse
-
-
     fun negativePositiveZero(a: Int) {
         when {
             a > 0 -> {
@@ -113,7 +111,7 @@ class MyAllFun {
             println("Triangle Is Not Valid")
         }
     }
-   fun whatIsYourGrade(percentage: Int){
+    fun whatIsYourGrade(percentage: Int){
        when(percentage){
            in 100 downTo 90 -> println("Grade (A)")
            in 89 downTo 80 -> println("Grade (B)")
@@ -124,10 +122,7 @@ class MyAllFun {
        }
    }
 
-
     //when//
-
-
     fun maxTwoNumber(num1: Int, num2: Int) {
         when {
             num1 > num2 -> println("max:${num1}")
@@ -151,4 +146,109 @@ class MyAllFun {
     }
 
     //Loop//
+    fun printNumber(n:Int){
+        for (i in 1..n){
+            println(i)
+        }
+    }
+    fun printNumberReverse(n:Int){
+        for (i in n downTo 1 ){
+            println(i)
+        }
+    }
+    fun alphabetsAtoZ(){
+        for (i in 'A'..'Z' ){
+            println(i)
+        }
+    }
+    fun evenNumber1ton(n: Int) {
+        for (i in 1..n) {
+            if (i % 2 == 0)
+                println("$i Even Number")
+        }
+    }
+    fun oddNumber1ton(n: Int) {
+        for (i in 1..n) {
+            if (i % 2 != 0)
+                println("$i Odd Number")
+        }
+    }
+    fun sumOfAllNaturalNumber(n: Int) {
+        var number = 0
+        for (i in 1..n) {
+            number += i
+        }
+        println(number)
+    }
+    fun sumEvenNumber1ton(n: Int) {
+        var number = 0
+        for (i in 1..n) {
+            if (i % 2 == 0)
+                number += i
+        }
+        println(number)
+    }
+    fun sumOddNumber1ton(n: Int) {
+        var number = 0
+        for (i in 1..n) {
+            if (i % 2 != 0)
+                number += i
+        }
+        println(number)
+    }
+    fun multiplicationTable(yourNumber: Int, n: Int) {
+        for (i in 1..n) {
+            println("${yourNumber * i}")
+        }
+    }
+    fun countNumber() {
+        var number = 1020
+        var count = 0
+        while (number != 0) {
+            count++
+            number /= 10
+        }
+        println(count)
+    }
+    fun firstAndLastDigits(number: Int) {
+        val last = number % 10
+        var n = number
+        while (n >= 10) {
+            n /= 10
+        }
+        val first = n
+        println("first digits $first")
+        println("last digits $last")
+    }
+    fun sumFirstAndLastDigits(number: Int) {
+        val last = number % 10
+
+        var n = number
+        while (n >= 10) {
+            n /= 10
+        }
+        val first = n
+        val sum = last+first
+        println("first digits: $first")
+        println("last digits: $last")
+        println("Sum of first and last digits: $sum")
+    }
+    fun swapFirstAndLastDigits(number: Int) {
+        val last = number % 10
+        var n = number
+        while (n >= 10) {
+            n /= 10
+        }
+        val first = n
+        println("first digits: $first")
+        println("last digits: $last")
+        var f = first
+        var l = last
+        f += l
+        l =f-l
+        f -= l
+        println("Swap first and last digits: $f , $l")
+    }
+
+
 }
