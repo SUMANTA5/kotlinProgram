@@ -6,7 +6,6 @@ import allclass.MyAllFun
 fun main() {
 
     val a = MyAllFun()
-    val isEvenNumber = a.countNumber()
-
+    val isEvenNumber = a.armstrong1Ton(1000)
 
 }

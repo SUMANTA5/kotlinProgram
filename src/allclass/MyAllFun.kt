@@ -1,5 +1,5 @@
 package allclass
-import sun.awt.geom.Crossings
+
 class MyAllFun {
 
      //IfElse
@@ -249,6 +249,182 @@ class MyAllFun {
         f -= l
         println("Swap first and last digits: $f , $l")
     }
+    fun sumOfDigits(number: Int) {
+        var sum = 0
+        var n = number
+        while (n != 0) {
+            sum += n % 10
+            n /= 10
+        }
+        println("Sum Of Digits: $sum")
+    }
+    fun productOfDigits(number: Int){
+        var p = 1
+        var n = number
+        while (n != 0){
+            p *= (n % 10)
+            n /= 10
+        }
+        println("Product of digits a number: $p")
+    }
+    fun reverse(number: Int) {
+        var n = number
+        var reverseNumber = 0
+        var r: Int
+        while (n != 0) {
+            r = n % 10
+            reverseNumber = reverseNumber * 10 + r
+            n /= 10
+        }
+        println("Reverse Number Is: $reverseNumber")
+    }
+    fun palindromeOfNumber(number: Int) {
+        var n = number
+        var reverseNumber = 0
+        var r: Int
+        while (n != 0) {
+            r = n % 10
+            reverseNumber = reverseNumber * 10 + r
+            n /= 10
+        }
+        if (number==reverseNumber) {
+            println("it palindrome number")
+        }else println("it not palindrome number")
+    }
+    fun frequency(number: Int) {
+        var count = 0
+        var n = number
+        while (n != 0) {
+            n /= 10
+            count++
+        }
+        println("frequency of each digits: $count")
+    }
+    fun numberToWords(number: Int) {
+        var n = number
+        var reverseNumber = 0
+        while (n != 0) {
+            reverseNumber = (reverseNumber * 10) + (n % 10)
+            n /= 10
+        }
+        while (reverseNumber != 0) {
+            when (reverseNumber % 10) {
+                0 -> print("zero")
+                1 -> print("one")
+                2 -> print("two")
+                3 -> print("three")
+                4 -> print("for")
+                5 -> print("five")
+                6 -> print("six")
+                7 -> print("seven")
+                8 -> print("eight")
+                9 -> print("nine")
+            }
+            reverseNumber /= 10
+        }
+    }
+    fun factors(number: Int){
+        for (i in 1..number){
+            if (number %i==0) println(i)
+        }
+    }
+    fun factorial(number: Int){
+        var factorial = 1
+        for (i in 1..number){
+            factorial *= i
+        }
+        println(factorial)
+    }
+    fun primeNumber(number: Int) {
+        var flag: Boolean = true
+        for (i in 2..number-1) {
+            if (number % i == 0) {
+                flag = false
+                break
+            }
+        }
+        if (flag)
+            println("prime")
+        else
+            println("not prime")
+    }
+    fun primeNumber1Ton(n: Int) {
+        for (j in 1..n) {
+            var flag: Boolean = true
+            for (i in 2..j - 1) {
+                if (j % i == 0) {
+                    flag = false
+                    break
+                }
+            }
+            if (flag == true)
+                println("prime:$j")
+        }
+    }
+    fun sumOfPrimeNumber1Ton(n: Int) {
+        var sum =0
+        for (j in 1..n) {
+            var flag: Boolean = true
+            for (i in 2..j - 1) {
+                if (j % i == 0) {
+                    flag = false
+                    break
+                }
+            }
+            if (flag == true)
+                sum += j
+        }
+        println("sum of Prime number:$sum")
+    }
+    fun factorsOfPrimeNumber1Ton(n: Int) {
+        for (j in 1..n) {
+            var flag: Boolean = true
+            for (i in 2 until j) {
+                if (j % i == 0) {
+                    flag = false
+                    break
+                }
+            }
+            if (flag)
+                if (n%j==0)
+                    println(j)
+        }
+    }
+    fun armstrong(number: Int){
+        var  num = number
+        var lastNumber : Int
+        var sum = 0
+        while (num!=0){
+            lastNumber = num%10
+            sum += lastNumber * lastNumber * lastNumber
+            num /= 10
+        }
+        if (sum == number)
+            println("Armstrong Number")
+        else
+            println("Is Not Armstrong Number")
+    }
+    fun armstrong1Ton(number: Int){
+        var lastNumber : Int
+        var sum : Int
+        var a : Int
+        for (i in 1..number) {
+            a = i
+            sum = 0
+            while (a != 0) {
+                lastNumber = a % 10
+                sum += lastNumber * lastNumber * lastNumber
+                a /= 10
+            }
+            if (i == sum)
+                println(sum)
+        }
+    }
+
+
+
+
+
 
 
 }
