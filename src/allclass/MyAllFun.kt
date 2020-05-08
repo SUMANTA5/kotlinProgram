@@ -653,5 +653,59 @@ class MyAllFun {
         }
     }
 
+    fun hollowInvertedPyramidStarPattern() {
+        val rows = 5
+        val column = 9
+        for (i in 1..rows) {
+            for (j in 1..column) {
+                if (i == 1 || j == i || j == 10 - i)
+                    print("* ")
+                else
+                    print("  ")
+            }
+            println()
+        }
+    }
+    fun halfDiamondStarPattern() {
+        val rows = 9
+        val column = 5
+        var k = 0
+        for (i in 1..rows) {
+            if (i <= 5) k++ else k--
+            for (j in 1..column) {
+                if (j < k)
+                    print("* ")
+                else
+                    print("  ")
+            }
+            println()
+        }
+    }
+ fun mirroredHalfDiamondStarPattern() {
+        val rows = 9
+        val column = 5
+        var k = 0
+        for (i in 1..rows) {
+            if (i <= 5) k++ else k--
+            for (j in 1..column) {
+                if (j >=6-k)
+                    print("* ")
+                else
+                    print("  ")
+            }
+            println()
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 }

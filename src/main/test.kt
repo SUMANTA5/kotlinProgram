@@ -6,6 +6,6 @@ import allclass.MyAllFun
 fun main() {
 
     val a = MyAllFun()
-    val isEvenNumber = a.invertedPyramidStarPattern()
+    val isEvenNumber = a.mirroredHalfDiamondStarPattern()
 
 }
